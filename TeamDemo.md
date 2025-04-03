@@ -1,3 +1,5 @@
+
+# Azure Resource Testing
 1. Static web app URL - https://icy-river-00d5a6d0f.6.azurestaticapps.net
 2. platform20maindb
 - Pre-Requisite : pgadmin4
@@ -48,7 +50,8 @@ npm --version
 python3 --version
 pip3 --version
 ```
-# Steps to Install PGADMIN4 on Windows/macOS
+---
+## Steps to Install PGADMIN4 on Windows/macOS
 ### Download Desktop Version (Windows/macOS)
 1. Visit https://www.pgadmin.org/download/
 2. Download the appropriate installer for your OS
@@ -65,11 +68,9 @@ pip3 --version
     - Password: Your PostgreSQL password
 - Click "Save" to establish the connection
 
-# Steps to Install PuTTY on Windows/macOS
-
-## For Windows:
-
-### Method 1: Official Installer  
+## Steps to Install PuTTY on Windows/macOS
+### For Windows:
+#### Method 1: Official Installer  
 1. Go to the official PuTTY download page:  
    [PuTTY Download Page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
 2. Under **"Package files"**, look for:  
@@ -80,15 +81,14 @@ pip3 --version
 5. Follow the installation wizard (you can accept all defaults).  
 6. PuTTY will be installed in your **Start Menu**.  
 
-### Verifying the Installation (Windows):  
+#### Verifying the Installation (Windows):  
 1. Open **Start Menu** and search for **"PuTTY"**.  
 2. Click to launch the application.  
 
 ---
 
-## For macOS:
-
-### Method 1: Using Homebrew  
+### For macOS:
+#### Method 1: Using Homebrew  
 1. Open **Terminal**.  
 2. Install Homebrew (if not installed):  
    ```bash
@@ -100,5 +100,5 @@ pip3 --version
 2. Open **Terminal** and run:  
    ```bash
    sudo port install putty
-### Verifying the Installation (macOS):
+#### Verifying the Installation (macOS):
 - Open Terminal and type: `putty`
