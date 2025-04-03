@@ -1,7 +1,7 @@
 
 # Azure Resource Testing
 1. Static web app URL - https://icy-river-00d5a6d0f.6.azurestaticapps.net
-2. Way to connect **Postgres database** using pgadmin4
+2. Way to connect **platform20maindb** using pgadmin
 - prerequisite : pgadmin4
 ```sh
 General
@@ -13,7 +13,8 @@ MaintainceDatabase: CONFIDENTIAL
 Username: adminUser
 Password: CONFIDENTIAL
 ```
-3. platform20orgdb
+3. Way to connect **platform20orgdb** using pgadmin
+- prerequisite : pgadmin4
 ```sh
 General 
 Name : platform20orgdb
@@ -24,12 +25,12 @@ MaintainceDatabase: CONFIDENTIAL
 Password: CONFIDENTIAL
 ```
 4. Ways to connect **VM** using putty
-- prerequisite: Putty
+- prerequisite: Putty, platform20_private.ppk
 ```
 - Install putty 
 - Under saved session type platform20_etl
 - click on platform20_etl 
-- Left side Connections >> SSH >> Auth >> Credentials >> public key for authentication Browse the key .ppk file
+- Left side Connections >> SSH >> Auth >> Credentials >> public key for authentication Browse the key platform20_private.ppk file
 - Go to session click on platform20_etl and save
 - Paste <PublicIp> in the hostname make sure port is 22
 - Now enter adminuser
