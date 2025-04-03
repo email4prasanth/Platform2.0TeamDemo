@@ -1,7 +1,7 @@
 
 # Azure Resource Testing
 1. Static web app URL - https://icy-river-00d5a6d0f.6.azurestaticapps.net
-2. Way to connect **platform20maindb** using pgadmin
+2. Way to connect **Postgres database** using pgadmin4
 - prerequisite : pgadmin4
 ```sh
 General
