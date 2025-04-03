@@ -1,8 +1,8 @@
 
 # Azure Resource Testing
 1. Static web app URL - https://icy-river-00d5a6d0f.6.azurestaticapps.net
-2. platform20maindb
-- Pre-Requisite : pgadmin4
+2. Way to connect **platform20maindb** using pgadmin
+- prerequisite : pgadmin4
 ```sh
 General
 Name : platform20maindb
@@ -23,8 +23,8 @@ Port: 5432
 MaintainceDatabase: CONFIDENTIAL
 Password: CONFIDENTIAL
 ```
-4. Ways to connect using putty
-- Pre-requisites: Putty
+4. Ways to connect **VM** using putty
+- prerequisite: Putty
 ```
 - Install putty 
 - Under saved session type platform20_etl
