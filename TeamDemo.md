@@ -26,6 +26,9 @@ Password: CONFIDENTIAL
 ```
 4. Ways to connect **VM** using putty
 - prerequisite: Putty, platform20_private.ppk
+- ETL - 52.191.63.230
+- BACKEND - 20.168.247.124
+- REDIS - 13.82.214.196
 ```
 - Install putty 
 - Under saved session type platform20_etl
