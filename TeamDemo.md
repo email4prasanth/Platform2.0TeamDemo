@@ -1,10 +1,9 @@
 # 🗓️ Meeting Agenda: Azure Resource Testing & Connectivity Setup
 
-Objective: Validate connectivity and verify setup for Azure-hosted components (Static Web App, Databases, VMs).
+Objective: Validate connectivity and verify setup for Azure-hosted components (Databases).
 
 ## Azure Resource Testing
-1. Static web app URL - https://icy-river-00d5a6d0f.6.azurestaticapps.net
-2. Way to connect **platform20maindb** using pgadmin
+1. Way to connect **platform20maindb** using pgadmin
 - prerequisite : pgadmin4
 ```sh
 General
@@ -16,7 +15,7 @@ MaintainceDatabase: CONFIDENTIAL
 Username: adminUser
 Password: CONFIDENTIAL
 ```
-3. Way to connect **platform20orgdb** using pgadmin
+2. Way to connect **platform20orgdb** using pgadmin
 - prerequisite : pgadmin4
 ```sh
 General 
@@ -27,36 +26,7 @@ Port: 5432
 MaintainceDatabase: CONFIDENTIAL
 Password: CONFIDENTIAL
 ```
-4. Ways to connect **VM** using putty
-- prerequisite: Putty, platform20_private.ppk
-- ETL - 52.191.63.230
-- BACKEND - 20.168.247.124
-- REDIS - 13.82.214.196
-```
-- Install putty 
-- Under saved session type platform20_etl
-- click on platform20_etl 
-- Left side Connections >> SSH >> Auth >> Credentials >> public key for authentication Browse the key platform20_private.ppk file
-- Go to session click on platform20_etl and save
-- Paste <PublicIp> in the hostname make sure port is 22
-- Now enter adminuser
-- If you want to increase the font size go to top white border right click change settings >> platform20_etl >>Apperance >> Font Bold 18 >> Apply >>OK.
-```
-- Manual Verification Steps
-```sh
-# Verify Docker installation
-docker --version
-docker compose version
-systemctl status docker
 
-# Verify Node.js installation
-node --version
-npm --version
-
-# Verify Python installation
-python3 --version
-pip3 --version
-```
 ---
 ## Steps to Install PGADMIN4 on Windows/macOS
 ### Download Desktop Version (Windows/macOS)
@@ -74,38 +44,28 @@ pip3 --version
     - Username: Your PostgreSQL username
     - Password: Your PostgreSQL password
 - Click "Save" to establish the connection
-
-## Steps to Install PuTTY on Windows/macOS
-### For Windows:
-#### Method 1: Official Installer  
-1. Go to the official PuTTY download page:  
-   [PuTTY Download Page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
-2. Under **"Package files"**, look for:  
-   - `putty-64bit-X.XX-installer.msi` (for 64-bit Windows)  
-   - `putty-X.XX-installer.msi` (for 32-bit Windows)  
-3. Click the MSI installer link to download.  
-4. Run the downloaded `.msi` file.  
-5. Follow the installation wizard (you can accept all defaults).  
-6. PuTTY will be installed in your **Start Menu**.  
-
-#### Verifying the Installation (Windows):  
-1. Open **Start Menu** and search for **"PuTTY"**.  
-2. Click to launch the application.  
-
 ---
+## Steps to instal azure cli
+### Install Azure CLI on Windows
+#### Install via MSI (Recommended)
+1. Download the latest Azure CLI MSI installer:
+   👉 [Azure CLI for Windows (64-bit)](https://aka.ms/installazurecliwindows)
+2. Run the downloaded `.msi` file.
+3. Follow the installation wizard.
+4. Open **Command Prompt** or **PowerShell** and verify installation:
 
-### For macOS:
-#### Method 1: Using Homebrew  
-1. Open **Terminal**.  
-2. Install Homebrew (if not installed):  
-   ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-3. Install PuTTY: `brew install putty`.
-### Method 2: Using MacPorts  
-1. Install MacPorts (if not installed):  
-   [MacPorts Installation](https://www.macports.org/install.php)  
-2. Open **Terminal** and run:  
-   ```bash
-   sudo port install putty
-#### Verifying the Installation (macOS):
-- Open Terminal and type: `putty`
+```bash
+   az version
+```
+## Install Azure CLI on macOS
+###  Install via Homebrew (Recommended)
+#### Install Homebrew (if not already installed):
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+-Install Azure CLI: 
+```sh
+brew update && brew install azure-cli
+az --version
+```
+
