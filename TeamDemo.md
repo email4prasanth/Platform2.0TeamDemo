@@ -1,5 +1,8 @@
+# 🗓️ Meeting Agenda: Azure Resource Testing & Connectivity Setup
 
-# Azure Resource Testing
+Objective: Validate connectivity and verify setup for Azure-hosted components (Static Web App, Databases, VMs).
+
+## Azure Resource Testing
 1. Static web app URL - https://icy-river-00d5a6d0f.6.azurestaticapps.net
 2. Way to connect **platform20maindb** using pgadmin
 - prerequisite : pgadmin4
